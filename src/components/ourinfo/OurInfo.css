@@ -83,7 +83,7 @@ align-items: center;
 }
 @media screen and (max-width : 330px) and (min-width : 0px) {
     .info-title{
-     font-size: 36px;
+     font-size: 38px;
     }
     .info-description{
      font-size: 18px;
