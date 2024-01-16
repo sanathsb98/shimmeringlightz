@@ -15,6 +15,7 @@
     align-items: center;
     max-width: 2000px;
     /* background-color: #101828; */
+   
 }
 .info-products-left{
     /* background-color: #b3bcd0; */
@@ -254,7 +255,7 @@ height: 100%;
  }
  @media screen and (max-width : 600px) and (min-width : 0px) {
 .info-products-container{
-    padding: 75px 0px;
+    padding: 75px 0px 10px 0px;
 }
 
 .design-product-box{

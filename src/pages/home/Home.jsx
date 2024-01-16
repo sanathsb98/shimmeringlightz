@@ -2,6 +2,7 @@ import React from 'react';
 import '../home/Home.css';
 import OurInfo from '../../components/ourinfo/OurInfo';
 import ProductsWeOffer from '../../components/productsweoffer/ProductsWeOffer';
+import OurPassion from '../../components/ourpassion/OurPassion';
 
 
 
@@ -22,9 +23,10 @@ const Home = () => {
         </div>
     </div>
     <OurInfo/>
-    
-    </div>
     <ProductsWeOffer/>
+    <OurPassion/>
+    </div>
+  
     </>
   )
 }
