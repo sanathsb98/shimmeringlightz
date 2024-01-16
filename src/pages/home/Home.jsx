@@ -1,11 +1,13 @@
 import React from 'react';
 import '../home/Home.css';
 import OurInfo from '../../components/ourinfo/OurInfo';
+import ProductsWeOffer from '../../components/productsweoffer/ProductsWeOffer';
 
 
 
 const Home = () => {
   return (
+    <>
     <div className='home-container'>
     <div className='home-page'>
        
@@ -20,7 +22,10 @@ const Home = () => {
         </div>
     </div>
     <OurInfo/>
+    
     </div>
+    <ProductsWeOffer/>
+    </>
   )
 }
 
