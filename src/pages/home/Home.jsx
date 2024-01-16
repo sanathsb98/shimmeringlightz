@@ -3,6 +3,7 @@ import '../home/Home.css';
 import OurInfo from '../../components/ourinfo/OurInfo';
 import ProductsWeOffer from '../../components/productsweoffer/ProductsWeOffer';
 import OurPassion from '../../components/ourpassion/OurPassion';
+import Footer from '../../components/footer/Footer';
 
 
 
@@ -25,8 +26,9 @@ const Home = () => {
     <OurInfo/>
     <ProductsWeOffer/>
     <OurPassion/>
+   
     </div>
-  
+    {/* <Footer/> */}
     </>
   )
 }
