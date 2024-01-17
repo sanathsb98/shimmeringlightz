@@ -246,11 +246,11 @@ height: 100%;
 .info-product-item{
     padding: 10%;
 }
-.our-info-container{
+/* .our-info-container{
  
     padding: 60px 60px 7px 60px;
-    /* background-color: #839ed3; */
-}
+
+} */
 
  }
  @media screen and (max-width : 600px) and (min-width : 0px) {
@@ -304,7 +304,7 @@ bottom: -42px;
 }
 .our-info-container{
  
-    padding: 60px 60px 0px 60px;
+    padding: 60px 10px 0px 10px;
     /* background-color: #839ed3; */
 }
 .design-intro-title{
