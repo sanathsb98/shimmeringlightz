@@ -34,22 +34,9 @@ const OurInfo = () => {
 
 
                                 <div className='svg-container'>
-                                    <svg className='immo'  viewBox="0 0 516 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        {/* Background Shape */}
-                                        <path d="M0 262.78V30C0 13.4315 13.4315 0 30 0H486C502.569 0 516 13.4315 516 30V330C516 346.569 502.569 360 486 360H178.46C161.891 360 148.46 346.569 148.46 330V322.78C148.46 306.212 135.028 292.78 118.46 292.78H30C13.4315 292.78 0 279.349 0 262.78Z" fill="#E2F3FF" />
+                    
+                                            <img className='immo' src={demo} x="0" y="0" width="516" height="360" />
 
-                                        {/* Background Image Pattern */}
-                                        <defs>
-                                            <pattern id="image" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                            <image href="/src/images/lamp.svg" x="0" y="0" width="516" height="360" />
-
-                                            </pattern>
-                                        </defs>
-
-                                        {/* Apply Background Image Pattern to the Shape */}
-                                        <path d="M0 262.78V30C0 13.4315 13.4315 0 30 0H486C502.569 0 516 13.4315 516 30V330C516 346.569 502.569 360 486 360H178.46C161.891 360 148.46 346.569 148.46 330V322.78C148.46 306.212 135.028 292.78 118.46 292.78H30C13.4315 292.78 0 279.349 0 262.78Z" fill="url(#image)" />
-
-                                    </svg>
                                     <div className='design-intro-title'>
                                       <div>  Design</div>
                                     </div>
