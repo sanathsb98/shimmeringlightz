@@ -123,6 +123,7 @@ line-height: 24px; /* 150% */
     }
     .our-passion-content{
         gap: 12px;
+        padding: 20px 0 40px;
     }
 }
 
