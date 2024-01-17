@@ -41,7 +41,8 @@ const OurInfo = () => {
                                         {/* Background Image Pattern */}
                                         <defs>
                                             <pattern id="image" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                                <image href="/src/images/lamp.svg" x="0" y="0"  width="516" height="360"  />
+                                            <image href="../src/images/lamp.svg" x="0" y="0" width="516" height="360" />
+
                                             </pattern>
                                         </defs>
 
