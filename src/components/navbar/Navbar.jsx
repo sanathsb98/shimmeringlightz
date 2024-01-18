@@ -1,11 +1,18 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import '../navbar/Navbar.css';
 import logo from '/src/images/logo.svg';
-import {motion} from 'framer-motion'
+import {inView, motion} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Navbar = () => {
+
+    const animation = {
+        initial : { y : "-100%"},
+        enter : i => ({y:"0",transition:{duration:0.75, ease : [0.33,1,0.68,1],delay : 0.075 * i}})
+    }
+
     return (
-        <div className='navbar-space'>
+        <motion.div variants={animation} initial="initial" animate={inView ? "enter" : ""} className='navbar-space'>
             <div className='navbar-content'>
                 <div className='navbar-left'>
                     <img className='shimmering-logo' src={logo} width='100%' height='100%' />
@@ -24,7 +31,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

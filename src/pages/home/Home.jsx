@@ -17,7 +17,13 @@ const Home = () => {
         <div className='home-content'>
          <div className='home-empty-space'></div>
            <div className='home-content-info'>
-            <div className='home-title'>Brightening Spaces,<br className='gaps'/> Creating Moments</div>
+
+         <div className='home-titles'>
+         <div className='home-title'>Brightening Spaces</div>
+            <br className='gaps'/>
+            <div  className='home-title'> Creating Moments</div>
+         </div>
+
             <div className='home-description'>a world where lighting is an art form, a story telling <br className='gaps'/> medium, and a key player in sustainable design.</div>
             <motion.div whileHover={{scale:1.1}} className='home-explore-btn'>Explore Products</motion.div>
            </div>

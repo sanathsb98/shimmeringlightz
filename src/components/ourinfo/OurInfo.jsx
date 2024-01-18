@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import '../ourinfo/OurInfo.css';
 import demo from '/src/images/lamp.svg';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const OurInfo = () => {
     const svgStyle = {
@@ -19,14 +20,29 @@ const OurInfo = () => {
         left: '0',
         
       };
+
+  
+
+      const {ref,inView} = useInView({
+        threshold:0.06,
+        triggerOnce:true
+      })
+
+      const animation = {
+        initial : {y:"150%"},
+        enter: i => ({y: "0", transition: {duration: 0.75, ease: [0.33, 1, 0.68, 1],  delay: 0.075 * i}})
+      }
+
     return (
-        <div className='our-info-container'>
-            <div className='our-info-contents'>
-                <div className='info-title'>Transformative Lighting Solutions, Illuminating Every Space with Timeless Elegance</div>
+        <div  className='our-info-container'>
+            <div ref={ref}  className='our-info-contents'>
+                <motion.div  variants={animation} initial="initial" animate={inView ? "enter" : ""}   className='info-title'>Transformative Lighting Solutions, Illuminating Every Space with Timeless Elegance</motion.div>
+
+                <div className='info-wrapper-box'>
                 <div className='info-line-box'>
                     <div className='info-line'></div>
                 </div>
-                <div className='info-description'>Providing uniform, well-balanced illumination. Aspects of the building architecture and the interior design, who believe that illumination is more than just bulbs and circuits. It's about evoking emotions, creating atmosphere, and guiding the eye like a skilled storyteller.</div>
+                <motion.div className='info-description'>Providing uniform, well-balanced illumination. Aspects of the building architecture and the interior design, who believe that illumination is more than just bulbs and circuits. It's about evoking emotions, creating atmosphere, and guiding the eye like a skilled storyteller.</motion.div>
                 <div className='info-products-container'>
                     <div className='info-products-left'>
                         <div className='design-product-box'>
@@ -89,6 +105,10 @@ const OurInfo = () => {
 
                     </div>
                 </div>
+                </div>
+
+
+               
             </div>
         </div>
     )
