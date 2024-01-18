@@ -1,6 +1,7 @@
 import React from 'react';
 import '../footer/Footer.css';
-import logo from '/src/images/logo.svg'
+import logo from '/src/images/logo.svg';
+import {motion} from 'framer-motion';
 
 const Footer = () => {
   return (
@@ -276,17 +277,17 @@ const Footer = () => {
 
                        <div className='footer-company-section'>
                        <div className='company-section-title'>Company</div>
-                        <div className='company-section-tab'>About</div>
-                        <div className='company-section-tab'>Services</div>
-                        <div className='company-section-tab'>Product</div>
-                        <div className='company-section-tab'>Contact</div>
+                        <motion.div whileHover={{scale:1.04}} className='company-section-tab'>About</motion.div>
+                        <motion.div whileHover={{scale:1.04}} className='company-section-tab'>Services</motion.div>
+                        <motion.div whileHover={{scale:1.04}} className='company-section-tab'>Product</motion.div>
+                        <motion.div whileHover={{scale:1.04}} className='company-section-tab'>Contact</motion.div>
                        </div>
 
                        <div className='footer-services-section'>
                        <div className='company-service-title'>Services</div>
-                       <div className='company-service-tab'>Design</div>
-                       <div className='company-service-tab'>Engineering</div>
-                       <div className='company-service-tab'>Supply</div>
+                       <motion.div whileHover={{scale:1.04}} className='company-service-tab'>Design</motion.div>
+                       <motion.div whileHover={{scale:1.04}} className='company-service-tab'>Engineering</motion.div>
+                       <motion.div whileHover={{scale:1.04}} className='company-service-tab'>Supply</motion.div>
                        </div>
 
                   </div>

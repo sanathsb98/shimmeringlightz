@@ -1,6 +1,7 @@
 import React from 'react';
 import '../ourinfo/OurInfo.css';
-import demo from '/src/images/lamp.svg'
+import demo from '/src/images/lamp.svg';
+import {motion} from 'framer-motion'
 
 const OurInfo = () => {
     const svgStyle = {
@@ -60,31 +61,31 @@ const OurInfo = () => {
                     </div>
                     <div className='info-products-right'>
 
-                        <div className='info-product-item'>
+                        <motion.div  whileHover={{scale:1.03}} className='info-product-item'>
 
                             <div className='info-product-title'>Engineering</div>
                             <div className='info-product-des'>Renowned software for professional lighting design in buildings. Offers accurate lighting calculations, energy analysis, and realistic visualizations.</div>
-                            <div className='explore-circle'>
+                            <motion.div whileHover={{scale:1.2}} className='explore-circle'>
                                 <svg  className='explore-arrow' xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                     <path d="M10 30L30 10" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M10 30L30 10" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M13.75 10H30V26.25" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                            </div>
+                            </motion.div>
 
-                        </div>
+                        </motion.div>
 
-                        <div className='info-product-item'>
+                        <motion.div  whileHover={{scale:1.03}} className='info-product-item'>
                             <div className='info-product-title'>Supply</div>
                             <div className='info-product-des'>Project stage helps gauge lead times and potential rush options & meeting the desired delivery dates in line with the project requirement & meeting client expectation.</div>
-                            <div className='explore-circle'>
+                            <motion.div  whileHover={{scale:1.2}} className='explore-circle'>
                                 <svg className='explore-arrow' xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                     <path d="M10 30L30 10" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M10 30L30 10" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M13.75 10H30V26.25" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
 
                     </div>
                 </div>

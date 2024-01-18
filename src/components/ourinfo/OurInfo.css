@@ -123,6 +123,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 30px;
+cursor: pointer;
 }
 .design-product-image{
     display: flex;
@@ -179,6 +180,7 @@ line-height: 150%; /* 27px */
 border: 1px solid #BCBCBC;
 background: linear-gradient(180deg, #F6FFE3 0%, #F8FBFF 100%);
 position: relative;
+cursor: pointer;
 }
 
 .immo{

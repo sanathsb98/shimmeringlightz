@@ -2,6 +2,7 @@ import React from 'react';
 import '../ourpassion/OurPassion.css';
 import carbonfoot from '/src/images/carbonfoot.svg';
 import Footer from '../footer/Footer';
+import {motion} from 'framer-motion'
 
 
 const OurPassion = () => {
@@ -25,7 +26,7 @@ const OurPassion = () => {
 
                 <div className='join-us-content'>
                     <div className='join-us-text'>Join us on this journey of sustainable illumination!</div>
-                    <div className='join-us-btn'>Contact us now</div>
+                    <motion.div whileHover={{scale:1.04}} className='join-us-btn'>Contact us now</motion.div>
                 </div>
                 
             </div>

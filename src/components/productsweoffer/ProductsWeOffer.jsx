@@ -1,6 +1,7 @@
 import React from 'react';
 import '../productsweoffer/ProductsWeOffer.css';
-import interiorlights from '/src/images/interiorlights.svg'
+import interiorlights from '/src/images/interiorlights.svg';
+import {motion} from 'framer-motion'
 
 const ProductsWeOffer = () => {
   return (
@@ -13,7 +14,7 @@ const ProductsWeOffer = () => {
               <div className='info-description'>Providing uniform, well-balanced illumination. Aspects of the building architecture and the interior design, who believe that illumination is more than just bulbs and circuits. It's about evoking emotions, creating atmosphere, and guiding the eye like a skilled storyteller.</div>
               <div className='products-weoffer-section'>
 
-                  <div className='products-weoffer-box interiorlights'>
+                  <motion.div whileHover={{scale : 1.03}} className='products-weoffer-box interiorlights'>
               
                       <div className='products-weoffer-titlear '>
                           <div>Interior Lights</div>
@@ -26,8 +27,8 @@ const ProductsWeOffer = () => {
                          </div>
                       </div>
 
-                  </div>
-                  <div className='products-weoffer-box outdoorlights'>
+                  </motion.div>
+                  <motion.div whileHover={{scale : 1.03}} className='products-weoffer-box outdoorlights'>
                   <div className='products-weoffer-titlear'>
                           <div>Outdoor Lights</div>
                          <div>
@@ -38,8 +39,8 @@ const ProductsWeOffer = () => {
                           </svg>
                          </div>
                       </div>
-                  </div>
-                  <div className='products-weoffer-box roadlighting'>
+                  </motion.div>
+                  <motion.div whileHover={{scale : 1.03}} className='products-weoffer-box roadlighting'>
                   <div className='products-weoffer-titlear'>
                           <div>Road Lighting</div>
                          <div>
@@ -50,8 +51,8 @@ const ProductsWeOffer = () => {
                           </svg>
                          </div>
                       </div>
-                  </div>
-                  <div className='products-weoffer-box valueengineering'>
+                  </motion.div>
+                  <motion.div whileHover={{scale : 1.03}} className='products-weoffer-box valueengineering'>
                   <div className='products-weoffer-titlear'>
                           <div>Value Engineering</div>
                          <div>
@@ -62,7 +63,7 @@ const ProductsWeOffer = () => {
                           </svg>
                          </div>
                       </div>
-                  </div>
+                  </motion.div>
 
               </div>
           </div>
