@@ -3,6 +3,7 @@ import '../ourinfo/OurInfo.css';
 import demo from '/src/images/lamp.svg';
 import {motion} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useScroll } from 'framer-motion';
 
 const OurInfo = () => {
     const svgStyle = {
@@ -21,7 +22,7 @@ const OurInfo = () => {
         
       };
 
-  
+      const { scrollYProgress } = useScroll()
 
       const {ref,inView} = useInView({
         threshold:0.06,
@@ -40,7 +41,7 @@ const OurInfo = () => {
 
                 <div className='info-wrapper-box'>
                 <div className='info-line-box'>
-                    <div className='info-line'></div>
+                    <motion.div style={{ scaleX: scrollYProgress  }}  className='info-line'></motion.div>
                 </div>
                 <motion.div className='info-description'>Providing uniform, well-balanced illumination. Aspects of the building architecture and the interior design, who believe that illumination is more than just bulbs and circuits. It's about evoking emotions, creating atmosphere, and guiding the eye like a skilled storyteller.</motion.div>
                 <div className='info-products-container'>

@@ -1,15 +1,18 @@
 import React from 'react';
 import '../productsweoffer/ProductsWeOffer.css';
 import interiorlights from '/src/images/interiorlights.svg';
-import {motion} from 'framer-motion'
+import {motion,useScroll} from 'framer-motion';
 
 const ProductsWeOffer = () => {
+
+    const { scrollYProgress } = useScroll()
+    
   return (
     <div className='products-weoffer-container'>
         <div className='products-weoffer-contents'>
               <div className='info-title'>Products We Offer</div>
               <div className='info-line-box'>
-                  <div className='info-line'></div>
+                  <motion.div style={{ scaleX: scrollYProgress  }} className='info-lines'></motion.div>
               </div>
               <div className='info-description'>Providing uniform, well-balanced illumination. Aspects of the building architecture and the interior design, who believe that illumination is more than just bulbs and circuits. It's about evoking emotions, creating atmosphere, and guiding the eye like a skilled storyteller.</div>
               <div className='products-weoffer-section'>

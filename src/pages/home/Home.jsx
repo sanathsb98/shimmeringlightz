@@ -9,6 +9,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 
+
 const Home = () => {
 
   const animation = {
@@ -25,7 +26,7 @@ const Home = () => {
     <>
     <div className='home-container'>
     <div className='home-page'>
-       
+       <img className='fading-red'/>
         <div className='home-content'>
          <div className='home-empty-space'></div>
            <div className='home-content-info'>

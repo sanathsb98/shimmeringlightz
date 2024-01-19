@@ -51,7 +51,7 @@
 }
 
 .info-line {
-    width: 40%;
+    width: 100%;
     border: 2px solid red;
 }
 .info-description{
@@ -255,6 +255,11 @@ height: 100%;
 .info-product-item{
     padding: 10%;
 }
+.our-info-container{
+   
+    padding: 60px 50px 20px 50px;
+    /* background-color: #839ed3; */
+}
 /* .our-info-container{
  
     padding: 60px 60px 7px 60px;
@@ -319,7 +324,7 @@ bottom: -42px;
 .design-intro-title{
   
     bottom: -42px;
-    transform: translate(-35px ,0px);
+    transform: translate(-75px ,0px);
     
     }
 
@@ -329,7 +334,7 @@ bottom: -42px;
     .design-intro-title{
   
         bottom: -42px;
-        transform: translate(-9px ,0px);
+        transform: translate(-52px ,0px);
         
         }
         

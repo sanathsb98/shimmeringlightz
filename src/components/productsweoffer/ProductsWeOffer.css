@@ -87,7 +87,10 @@ align-items: center;
     background-size: cover;
     background-position: center;
 }
-
+.info-lines{
+    width: 50%;
+    border: 2px solid red;
+}
 
 @media (max-width: 1500px) and (min-width : 1405px){
     .products-weoffer-box{
