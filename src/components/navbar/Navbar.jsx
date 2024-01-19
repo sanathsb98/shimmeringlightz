@@ -21,7 +21,7 @@ const Navbar = () => {
 
         if (isNavbarToggled) {
             console.log('toggled')
-            navbarspace.current.style.height = '50vh';
+            navbarspace.current.style.height = '47vh';
             navbarspace.current.style.justifyContent = 'flex-start';
             navbarspace.current.style.alignItems = 'flex-start';
             navbarleft.current.style.display = 'flex';
@@ -35,6 +35,7 @@ const Navbar = () => {
             shimmeringlights.current.style.height = '40%';
 
             navbarcontent.current.style.flexDirection = 'column'
+            navbarspace.current.style.backdropFilter = 'blur(30px)'
             
           
             // navbarleft.current.style.marginTop= '90%';
