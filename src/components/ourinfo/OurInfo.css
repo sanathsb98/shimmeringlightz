@@ -242,7 +242,13 @@ position: relative;
      font-size: 18px;
     }
  }
- @media screen and (max-width : 1250px) and (min-width : 0px) {
+ @media screen and (max-width : 1350px) and (min-width : 0px) {
+    .info-products-container{
+    padding: 60px 80px 20px 80px;
+    }
+}
+ 
+ @media screen and (max-width : 1300px) and (min-width : 0px) {
    .info-products-container{
     flex-direction: column;
    }
@@ -257,7 +263,7 @@ height: 100%;
 }
 .our-info-container{
    
-    padding: 60px 50px 20px 50px;
+    padding: 60px 0px 20px 0px;
     /* background-color: #839ed3; */
 }
 /* .our-info-container{
