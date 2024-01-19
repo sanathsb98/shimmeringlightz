@@ -10,6 +10,12 @@ const Navbar = () => {
 
     const navbarspace = useRef(null)
     const navbarcontent = useRef(null)
+    const navbarleft = useRef(null)
+    const mobiletab1 = useRef(null)
+    const mobiletab2 = useRef(null)
+    const mobiletab3 = useRef(null)
+    const mobiletab4 = useRef(null)
+    const shimmeringlights = useRef(null)
 
     useEffect(() => {
 
@@ -18,9 +24,41 @@ const Navbar = () => {
             navbarspace.current.style.height = '50vh';
             navbarspace.current.style.justifyContent = 'flex-start';
             navbarspace.current.style.alignItems = 'flex-start';
+            navbarleft.current.style.display = 'flex';
+            navbarleft.current.style.justifyContent = 'space-between';
+            navbarleft.current.style.flexDirection = 'column';
+            navbarleft.current.style.gap = '28px';
+            navbarleft.current.style.justifyContent = 'center';
+            navbarleft.current.style.alignItems = 'center';
+            navbarleft.current.style.padding= '18px';
+            shimmeringlights.current.style.width = '40%';
+            shimmeringlights.current.style.height = '40%';
+
+            navbarcontent.current.style.flexDirection = 'column'
+            
+          
+            // navbarleft.current.style.marginTop= '90%';
+            mobiletab1.current.style.display = 'block';
+            mobiletab2.current.style.display = 'block';
+            mobiletab3.current.style.display = 'block';
+            mobiletab4.current.style.display = 'block';
+            navbarcontent.current.style.alignItems = 'center';
         } else {
             console.log('not toggled')
             navbarspace.current.style.height = '10vh';
+            navbarspace.current.style.justifyContent = 'center';
+            navbarspace.current.style.alignItems = 'center';
+            mobiletab1.current.style.display = 'none';
+            mobiletab2.current.style.display = 'none';
+            mobiletab3.current.style.display = 'none';
+            mobiletab4.current.style.display = 'none';
+            navbarleft.current.style.marginTop= '0%';
+            navbarcontent.current.style.flexDirection = 'row';
+            shimmeringlights.current.style.width = '100%';
+            shimmeringlights.current.style.height = '100%';
+            navbarcontent.current.style.alignItems = 'center';
+            navbarleft.current.style.padding= '0px';
+            
         }
 
     }, [isNavbarToggled])
@@ -33,8 +71,12 @@ const Navbar = () => {
     return (
         <motion.div ref={navbarspace} variants={animation} initial="initial" animate={inView ? "enter" : ""} className='navbar-space'>
             <div  ref={navbarcontent}  className='navbar-content'>
-                <div className='navbar-left'>
-                    <img className='shimmering-logo' src={logo} width='100%' height='100%' />
+                <div ref={navbarleft} className='navbar-left'>
+                    <img ref={shimmeringlights} className='shimmering-logo' src={logo} width='100%' height='100%' />
+                    <motion.div ref={mobiletab1} whileHover={{scale : 1.2}} className='navbar-mobile-tab'>about</motion.div>
+                    <motion.div  ref={mobiletab2} whileHover={{scale : 1.2}} className='navbar-mobile-tab'>services</motion.div>
+                    <motion.div  ref={mobiletab3}  whileHover={{scale : 1.2}} className='navbar-mobile-tab'>product</motion.div>
+                    <motion.div  ref={mobiletab4}  whileHover={{scale : 1.2}} className='navbar-mobile-tab'>contact</motion.div>
                 </div>
                 <div className='navbar-right'>
                     <motion.div whileHover={{scale : 1.2}} className='navbar-tab'>about</motion.div>
