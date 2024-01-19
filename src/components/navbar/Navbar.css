@@ -13,6 +13,7 @@
 }
 .burger-menu{
     display: none;
+   
 }
 .shimmering-logo{
     cursor: pointer;
@@ -42,6 +43,15 @@
     font-style: normal;
     font-weight: 600;
 }
+.navbar-mobile-tab{
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    color: var(--White, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
 @media screen and (max-width : 770px) and (min-width : 0px) {
     .navbar-tab{
         display: none;
