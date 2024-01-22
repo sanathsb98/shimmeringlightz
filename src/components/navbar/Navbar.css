@@ -9,11 +9,9 @@
     top: 0;
     z-index: 20;
     backdrop-filter: blur(10px);
-   
 }
 .burger-menu{
     display: none;
-   
 }
 .shimmering-logo{
     cursor: pointer;
