@@ -16,6 +16,11 @@
 .shimmering-logo{
     cursor: pointer;
 }
+.linkanchor{
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+}
 .navbar-content{
     /* background: rgba(0, 0, 0, 0.10); */
     width: 100%;
@@ -40,6 +45,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    text-decoration: none;
 }
 .navbar-mobile-tab{
     cursor: pointer;
@@ -48,6 +54,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    text-decoration: none;
 }
 
 @media screen and (max-width : 770px) and (min-width : 0px) {
@@ -68,4 +75,10 @@
         align-items: center;
         padding: 20px 30px;
     }
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+    }
+    
 }

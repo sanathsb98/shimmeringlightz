@@ -1,8 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../navbar/Navbar.css';
 import logo from '/src/images/logo.svg';
 import { inView, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
 
@@ -16,6 +19,10 @@ const Navbar = () => {
     const mobiletab4 = useRef(null)
     const shimmeringlights = useRef(null)
     const crossicon = useRef(null)
+
+    const redirecttohome = () =>{
+        window.location.href = '/';
+    }
 
     useEffect(() => {
 
@@ -70,14 +77,20 @@ const Navbar = () => {
         <motion.div ref={navbarspace} variants={animation} initial="initial" animate={inView ? "enter" : ""} className='navbar-space'>
             <div ref={navbarcontent} className='navbar-content'>
                 <div ref={navbarleft} className='navbar-left'>
-                    <img ref={shimmeringlights} className='shimmering-logo' src={logo} width='100%' height='100%' />
-                    <motion.div ref={mobiletab1} whileHover={{ scale: 1.2 }} className='navbar-mobile-tab'>about</motion.div>
+                  <img onClick={redirecttohome} ref={shimmeringlights} className='shimmering-logo' src={logo} width='100%' height='100%' />
+                    
+
+                    <motion.div ref={mobiletab1} whileHover={{ scale: 1.2 }} >
+                       <Link className='navbar-mobile-tab' to='/aboutus'>about</Link>
+                        </motion.div>
                     <motion.div ref={mobiletab2} whileHover={{ scale: 1.2 }} className='navbar-mobile-tab'>services</motion.div>
                     <motion.div ref={mobiletab3} whileHover={{ scale: 1.2 }} className='navbar-mobile-tab'>product</motion.div>
                     <motion.div ref={mobiletab4} whileHover={{ scale: 1.2 }} className='navbar-mobile-tab'>contact</motion.div>
                 </div>
                 <div className='navbar-right'>
-                    <motion.div whileHover={{ scale: 1.2 }} className='navbar-tab'>about</motion.div>
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <Link to='/aboutus'  className='navbar-tab'>about</Link>
+                    </motion.div>
                     <motion.div whileHover={{ scale: 1.2 }} className='navbar-tab'>services</motion.div>
                     <motion.div whileHover={{ scale: 1.2 }} className='navbar-tab'>product</motion.div>
                     <motion.div whileHover={{ scale: 1.2 }} className='navbar-tab'>contact</motion.div>
